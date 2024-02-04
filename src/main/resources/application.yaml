@@ -1,0 +1,10 @@
+spring:
+
+#Conexão com o Banco de Dados MySQL
+   datasource:
+     url: jdbc:mysql://localhost:3306/planodesaude?useSSL=false
+     username: root
+     password: admin	
+
+#JPA Settings
+   jpa.hibernate.ddl_auto: update
