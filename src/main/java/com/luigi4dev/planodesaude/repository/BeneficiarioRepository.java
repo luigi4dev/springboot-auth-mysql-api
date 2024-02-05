@@ -4,6 +4,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.luigi4dev.planodesaude.model.Beneficiario;
 
-public interface PlanoDeSaudeRepository extends JpaRepository<Beneficiario, Long> {
+public interface BeneficiarioRepository extends JpaRepository<Beneficiario, Long> {
 
 }

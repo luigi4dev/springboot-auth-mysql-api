@@ -15,7 +15,7 @@ import com.luigi4dev.planodesaude.model.Beneficiario;
 import com.luigi4dev.planodesaude.service.PlanoDeSaudeService;
 
 @RestController
-@RequestMapping("/planodesaude/beneficiario")
+@RequestMapping("/beneficiario/")
 public class PlanoDeSaudeController {
 	
 	PlanoDeSaudeService planoDeSaudeService;
@@ -60,5 +60,13 @@ public class PlanoDeSaudeController {
 		return result;
 	}
 	
-
+	@GetMapping("{id}/documentos")
+	public String getDocumentosDoBeneficiario(@PathVariable("id") Long id) {
+		
+		Beneficiario beneficiario = planoDeSaudeService.getDocumentosDoBeneficiario(id);
+		
+		return beneficiario.listarDocumentos();
+	}
+	
+	
 }

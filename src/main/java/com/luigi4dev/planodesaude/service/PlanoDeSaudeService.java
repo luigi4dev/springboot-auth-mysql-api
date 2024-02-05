@@ -13,5 +13,6 @@ public interface PlanoDeSaudeService {
 	public String removeBeneficiario(Long id);
 	
 	public Collection<Beneficiario> getAllBeneficiarios();
+	public Beneficiario getDocumentosDoBeneficiario(Long id);
 
 }
